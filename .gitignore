@@ -1,0 +1,5 @@
+.Rhistory
+.RData
+.playwright-mcp/
+.claude/*.local.md
+rsconnect/

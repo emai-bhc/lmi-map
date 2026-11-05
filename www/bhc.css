@@ -1,0 +1,118 @@
+/* Better Housing Coalition brand styling
+   Palette (brand guide): orange #E86C1F, gold #FBB035, pale yellow #FEE49B,
+   green #8CC63F, light blue #ADE0ED, teal #00617F.
+   Typefaces: Lato (headings/accents), Lora (body); fallbacks Tahoma / Georgia. */
+:root {
+  --bhc-orange: #E86C1F;
+  --bhc-orange-dark: #C95A14;
+  --bhc-gold: #FBB035;
+  --bhc-yellow: #FEE49B;
+  --bhc-green: #8CC63F;
+  --bhc-blue: #ADE0ED;
+  --bhc-teal: #00617F;
+  --bhc-ink: #2b2b2b;
+}
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  color: var(--bhc-ink);
+  background: #fff;
+}
+.container-fluid { padding: 0; }
+
+h1, h2, h3, h4, label, .btn, .control-label, .legend-title {
+  font-family: 'Lato', Tahoma, sans-serif;
+}
+
+/* Header band: reversed (white) logo on brand orange */
+.bhc-header {
+  background: var(--bhc-orange);
+  color: #fff;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  border-bottom: 6px solid var(--bhc-gold);
+}
+.bhc-header img.bhc-logo { height: 64px; width: auto; display: block; }  /* >= 1.25in wide */
+.bhc-header .bhc-title {
+  font-family: 'Lato', Tahoma, sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.15;
+  margin: 0;
+  color: #fff;
+}
+.bhc-header .bhc-tagline {
+  font-family: 'Lato', Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: .04em;
+  margin: 4px 0 0;
+  color: #fff;
+}
+
+.bhc-body { padding: 22px 28px 10px; }
+
+/* Controls */
+.form-control:focus, .selectize-input.focus {
+  border-color: var(--bhc-orange);
+  box-shadow: 0 0 0 2px rgba(232, 108, 31, .25);
+}
+.selectize-dropdown .active { background: var(--bhc-yellow); color: var(--bhc-ink); }
+.control-label { font-weight: 700; color: var(--bhc-teal); }
+.help-block { color: #555; font-size: 13.5px; }
+hr { border-top: 2px solid var(--bhc-yellow); }
+
+.well {
+  background: #fff;
+  border: 1px solid var(--bhc-blue);
+  border-top: 4px solid var(--bhc-orange);
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+/* Result cards */
+.bhc-card {
+  padding: 12px 14px;
+  border-radius: 4px;
+  border-left: 6px solid;
+  font-size: 15px;
+}
+.bhc-card p { margin: 0 0 8px; }
+.bhc-card p:last-child { margin-bottom: 0; }
+.bhc-card .bhc-headline { font-family: 'Lato', Tahoma, sans-serif; font-weight: 900; font-size: 16px; }
+.bhc-card.lmi   { background: var(--bhc-yellow); border-color: var(--bhc-orange); }
+.bhc-card.notlmi{ background: #e6f5f9;           border-color: var(--bhc-teal); }
+.bhc-card.none  { background: #f1f1f1;           border-color: #9a9a9a; }
+.bhc-card.error { background: #fff3e6;           border-color: var(--bhc-gold); }
+
+/* Map container and popups */
+#map { border: 1px solid var(--bhc-blue); border-radius: 4px; }
+.maplibregl-popup-content { font-family: 'Lora', Georgia, serif; font-size: 13.5px; }
+.maplibregl-popup-content b { font-family: 'Lato', Tahoma, sans-serif; }
+
+/* Footer */
+.bhc-footer {
+  margin-top: 18px;
+  padding: 16px 28px 22px;
+  border-top: 6px solid var(--bhc-gold);
+  background: #faf7f2;
+  font-size: 13px;
+  color: #444;
+}
+.bhc-footer .bhc-footer-tag {
+  font-family: 'Lato', Tahoma, sans-serif;
+  font-weight: 900;
+  color: var(--bhc-orange);
+  font-size: 15px;
+  margin: 0 0 6px;
+}
+.bhc-footer p { margin: 0 0 4px; }
+
+@media (max-width: 767px) {
+  .bhc-header { padding: 12px 16px; gap: 14px; }
+  .bhc-header .bhc-title { font-size: 21px; }
+  .bhc-body, .bhc-footer { padding-left: 16px; padding-right: 16px; }
+}
